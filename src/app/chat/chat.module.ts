@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { RouterModule, Routes } from '@angular/router';
-import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { SharedModule } from '../shared/shared.module';
 import { UserDetailsComponent } from '../shared/user-details/user-details.component';
@@ -13,7 +13,7 @@ import { ChatRouteGuardService } from './chat-route-guard.service';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
-    ToastModule.forRoot(),
+    ToastrModule.forRoot(),
     RouterModule.forChild([ 
       { path: 'chat', component: ChatBoxComponent,canActivate:[ChatRouteGuardService] }
     ]),

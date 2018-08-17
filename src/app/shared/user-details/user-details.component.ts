@@ -13,6 +13,8 @@ export class UserDetailsComponent implements OnInit {
 
   
   public firstChar: string;
+  public userColor;
+  public userBg;
 
 
   ngOnInit(): void {

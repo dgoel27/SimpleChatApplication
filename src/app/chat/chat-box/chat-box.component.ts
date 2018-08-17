@@ -4,7 +4,7 @@ import { AppService } from './../../app.service';
 
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastrService } from 'ngx-toastr';
 import { FirstCharComponent } from '../../shared/first-char/first-char.component';
 import { ChatMessage } from './chat';
 import { CheckUser } from './../../CheckUser';
@@ -46,13 +46,13 @@ export class ChatBoxComponent implements OnInit{
     public AppService: AppService,
     public SocketService: SocketService,
     public router: Router,
-    private toastr: ToastsManager,
-    vcr: ViewContainerRef,
+    private toastr: ToastrService,
+    vcr: ViewContainerRef
   ) {
 
    
     
-    this.toastr.setRootViewContainerRef(vcr);
+    // this.toastr.setRootViewContainerRef(vcr);
 
 
   }

@@ -5,7 +5,7 @@ import { SignupComponent } from './signup/signup.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastModule } from 'ng2-toastr';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { ToastModule } from 'ng2-toastr';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastModule.forRoot(),
+    ToastrModule.forRoot(),
     RouterModule.forChild([
       { path: 'sign-up', component: SignupComponent }
     ])
